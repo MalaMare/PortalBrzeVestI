@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class CategoriesPage extends Page {
+    
+//    *********** testEditFirstCategory ***********
 
     private void clickOnAddCategoryButton() {
         clickOnElement(By.className("btn"));
@@ -26,7 +28,9 @@ public class CategoriesPage extends Page {
         sendTextOnTitleField();
         clickOnSaveCategoryButton();
     }
-
+    
+//  *******************************    
+    
     private void clickOnEditButton(WebElement row) {
         WebElement editButton = row.findElement(By.cssSelector("a[title='Edit']"));
         editButton.click();
@@ -45,6 +49,8 @@ public class CategoriesPage extends Page {
         titleField.clear();
         titleField.sendKeys(Helper.getRandomText());
     }
+    
+//  *******************************     
 
     private List<WebElement> getRowsFromTable() {
         WebElement tBody = waitForElementVisibility(By.className("ui-sortable"));
@@ -70,6 +76,8 @@ public class CategoriesPage extends Page {
         WebElement randomRow = rows.get(Helper.getRandomInteger(rows.size()));
         return randomRow;
     }
+    
+//  *******************************     
 
     public void editFirstCategory() {
         WebElement firstRow = chooseFirstCategory();
@@ -93,6 +101,8 @@ public class CategoriesPage extends Page {
         clickOnSaveCategoryButton();
     }
 
+//  *******************************     
+    
     private void clickOnConfirmDeleteButton() {
         clickOnElement(By.xpath("//*[@id=\'categoryDeleteDialog\']/div/div/div[3]/button[2]"));
     }

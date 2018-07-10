@@ -22,4 +22,19 @@ public class DashboardPage extends Page {
         return PageFactory.initElements(getDriver(), CategoriesPage.class);
     }
     
+    public RegionsPage goToRegions() {
+        clickOnElement(By.linkText("Regions"));
+        return PageFactory.initElements(getDriver(), RegionsPage.class);
+    }
+    
+    public PortalsPage goToPortals() {
+        clickOnElement(By.linkText("Portals"));
+        return PageFactory.initElements(getDriver(), PortalsPage.class);
+    }
+    
+    public SourcesPage goToSources() {
+        clickOnElement(By.linkText("Sources"));
+        return PageFactory.initElements(getDriver(), SourcesPage.class);
+    }
+    
 }

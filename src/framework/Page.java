@@ -8,10 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- *
- * @author cubes1
- */
+
 public class Page extends AbstractPage {
     
     //PRIVATE waits
@@ -69,6 +66,15 @@ public class Page extends AbstractPage {
         WebElement inputField = waitForElementVisibility(field);
         inputField.clear();
         inputField.sendKeys(text);
+    }
+    
+//    ******!!!******    
+    public String sendUrlOnField(By locator) {
+        WebElement inputField = waitForElementVisibility(locator);
+        inputField.clear();
+        String text = Helper.getRandomUrl();
+        inputField.sendKeys(text);
+        return text;
     }
     
 }

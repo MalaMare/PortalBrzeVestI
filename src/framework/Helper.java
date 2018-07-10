@@ -22,7 +22,7 @@ public class Helper {
     }
     
     public static String getRandomText() {
-        return "milomir-" + getRandomInteger();
+        return "marija-" + getRandomInteger();
     }
 
     public static String getRandomUrl() {
